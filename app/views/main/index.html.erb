@@ -1,0 +1,14 @@
+<h1> Welcome to the Blog!</h1>
+
+ <!-- create loop for each blog.all object and specify Blog.all.title -->
+ 
+    <% @blogs.each do |t| %>
+    
+    <!--linked Blog.all.title to the show verb so that every single entry becomes an anchor -->
+    
+    <h2> <%= t.id%> <%= link_to t.title, single_post_path(t) %> </h2>
+    
+    <!-- end the loop -->
+    <% end %>
+
+<%= link_to 'New Entry', new_post_path %>
